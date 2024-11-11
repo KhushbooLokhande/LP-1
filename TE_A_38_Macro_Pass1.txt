@@ -1,5 +1,4 @@
-// FINAL MACROPROCESSOR PASS-1
-
+package macro_Pass1;
 import java.util.*;
 import java.io.*;
 
@@ -9,7 +8,7 @@ class MntTuple {
 	
 	MntTuple(String s, int i) {
 		name = s;
-		index = i; 
+		index = i;
   
 	}
 	
@@ -37,7 +36,7 @@ class m1 {
 	
 	static void pass1() throws Exception {
 		String s = new String();
-		input = new BufferedReader(new InputStreamReader(new FileInputStream("input2.txt")));
+		input = new BufferedReader(new InputStreamReader(new FileInputStream("input.txt")));
 		PrintWriter output = new PrintWriter(new FileOutputStream("output_pass1.txt"), true);
 		while((s = input.readLine()) != null) {
 			if(s.equalsIgnoreCase("MACRO")) {
@@ -161,6 +160,9 @@ class m1 {
 	}
 }
 
+create txt file input and output_pass1.txt
+
+//input.txt
 /*  -------- INPUT -----------
 MACRO
 INCR &X,&Y,&REG=AREG
@@ -205,5 +207,3 @@ MOVER       ,#2,#0
 SUB         ,#2,#1
 MOVEM       ,#2,#0
 MEND
-
-*/
